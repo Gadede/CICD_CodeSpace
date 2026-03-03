@@ -24,3 +24,6 @@ jobs:
           
             - name: Run linter
               run: flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+
+            - name: Print GitHub Context
+              run: echo "This Work flow was triggered by a ${{ github.event_name }} event on branch ${{ github.ref }} by user ${{ github.actor }}."  
