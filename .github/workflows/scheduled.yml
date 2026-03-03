@@ -13,7 +13,7 @@ jobs:
               uses: actions/checkout@v6
           
             - name: Run a script
-              run: print "Good morning! Today is $(date)"
+              run: echo "Good morning! Today is $(date)"
 
-              
+
 
