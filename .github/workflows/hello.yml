@@ -1,0 +1,21 @@
+name: Hello Workflow
+
+on:
+   push:
+     branches:
+       - main
+
+jobs:
+  hello_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Print Hello World
+        run: echo "Hello, World! Today is $(date)"
+
+      - name: Print GitHub Context
+        run: echo "This Work flow was triggered by a ${{ github.event_name }} event on branch ${{ github.ref }} by user ${{ github.actor }}."
+        
+        
